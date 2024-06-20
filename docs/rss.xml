@@ -1,2 +1,45 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog Title</title><link>https://Meekdai.github.io/Gmeek-template</link><description>Blog description</description><copyright>Blog Title</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Meekdai.github.io/Gmeek-template</link></image><lastBuildDate>Thu, 14 Mar 2024 09:17:29 +0000</lastBuildDate><managingEditor>Blog Title</managingEditor><ttl>60</ttl><webMaster>Blog Title</webMaster><item><title>请接着之后的安装步骤执行</title><link>https://Meekdai.github.io/Gmeek-template/post/qing-jie-zhao-zhi-hou-de-an-zhuang-bu-zou-zhi-xing.html</link><description>如果你点击了`READM.md`的链接后，看到了这个页面，请继续之后的安装步骤执行。</description><guid isPermaLink="true">https://Meekdai.github.io/Gmeek-template/post/qing-jie-zhao-zhi-hou-de-an-zhuang-bu-zou-zhi-xing.html</guid><pubDate>Thu, 14 Mar 2024 09:15:10 +0000</pubDate></item><item><title>这是Gmeek模板仓库</title><link>https://Meekdai.github.io/Gmeek-template/post/zhe-shi-Gmeek-mo-ban-cang-ku.html</link><description>通过这个模板创建库，可以大大减少部署Gmeek博客的配置步骤。</description><guid isPermaLink="true">https://Meekdai.github.io/Gmeek-template/post/zhe-shi-Gmeek-mo-ban-cang-ku.html</guid><pubDate>Wed, 20 Dec 2023 07:42:24 +0000</pubDate></item></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog Title</title><link>https://suseloo.github.io/gitweb</link><description>Blog description</description><copyright>Blog Title</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://suseloo.github.io/gitweb</link></image><lastBuildDate>Thu, 20 Jun 2024 02:55:47 +0000</lastBuildDate><managingEditor>Blog Title</managingEditor><ttl>60</ttl><webMaster>Blog Title</webMaster><item><title>Python数据库连接</title><link>https://suseloo.github.io/gitweb/post/Python-shu-ju-ku-lian-jie.html</link><description>&#13;
+1、MySQL-python：只支持python2 是对C语言操作数据库的一个简单封装     &#13;
+2、mysqlclient：是1的分支效率最高，安装时容易因环境经常出现各种问题        &#13;
+3、pymysql：纯pthon实现效率不如2，但是无缝衔接python    &#13;
+4、mysql-connector-python：MySQL官方退出，效率慢  &#13;
+-- pip install pymysql  &#13;
+不直接使用原生sql语句进行操作 使用ORM方式操作 Flask-SQLAlchemy操作   &#13;
+-- pip install flask-sqlalchemy &#13;
+可以合并数据库不使用# with app.app_context():db.create_all() 相当于能动态更新数据库表     &#13;
+-- pip install flask-migrate        &#13;
+from flask_migrate import Migrate       &#13;
+migrate = Migrate(app,db)   &#13;
+**ORM模型映射成表的三步**    &#13;
+**1.flask db init #只需要执行一次**    &#13;
+**2.flask db migrate #每次添加模型类后执行 识别ORM模型的改变，生成迁移脚本**    &#13;
+**3.flask db upgrade #执行迁移脚本，完成ORM模型和数据库的映射,运行迁移脚本，同步到数据库中**    &#13;
+&#13;
+```python&#13;
+from flask import Flask,request,render_template&#13;
+from flask_sqlalchemy import SQLAlchemy&#13;
+from sqlalchemy import text&#13;
+from datetime import datetime&#13;
+&#13;
+app = Flask(__name__)&#13;
+&#13;
+#MySQL所在的主机名&#13;
+HOSTNAME = '127.0.0.1'&#13;
+#MySQL监听的端口号，默认3306&#13;
+PORT = 3306&#13;
+#数据库的账号&#13;
+USERNAME = 'root'&#13;
+#数据库密码&#13;
+PASSWORD = 'root'&#13;
+#数据库名称&#13;
+DATABASE = 'database_learn'&#13;
+&#13;
+app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://{USERNAME}:{PASSWORD}@{HOSTNAME}:{PORT}/{DATABASE}?charset=utf8mb4'&#13;
+&#13;
+db = SQLAlchemy(app)&#13;
+with app.app_context():&#13;
+    with db.engine.connect() as conn:&#13;
+        rs = conn.execute(text('SELECT 1'))&#13;
+        print(rs.fetchone()) #(1,)&#13;
+```。</description><guid isPermaLink="true">https://suseloo.github.io/gitweb/post/Python-shu-ju-ku-lian-jie.html</guid><pubDate>Thu, 20 Jun 2024 02:55:22 +0000</pubDate></item></channel></rss>

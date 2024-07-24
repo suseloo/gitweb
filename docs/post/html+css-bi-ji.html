@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="# 网页笔记
+## HTML
+### 标签
+#### img属性:
+* src:设置一个外部图片的路径 
+* alt:可以用来设置在图片不能显示时，对图片的描述，不写搜素引擎不收录 
+* width:修改图片宽度，一般px作为单位 
+* height:修改图片高度，一般px作为单位 
+* 一般不是自适应不建议设置width和height 
+
+#### meta标签
+* 搜素引擎在检索页面时，会同时检索页面中的关键词和描述，这2个值不会对页面有影响。">
+<meta property="og:title" content="html+css笔记">
+<meta property="og:description" content="# 网页笔记
+## HTML
+### 标签
+#### img属性:
+* src:设置一个外部图片的路径 
+* alt:可以用来设置在图片不能显示时，对图片的描述，不写搜素引擎不收录 
+* width:修改图片宽度，一般px作为单位 
+* height:修改图片高度，一般px作为单位 
+* 一般不是自适应不建议设置width和height 
+
+#### meta标签
+* 搜素引擎在检索页面时，会同时检索页面中的关键词和描述，这2个值不会对页面有影响。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://suseloo.github.io/gitweb/post/html%2Bcss-bi-ji.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<title>html+css笔记</title>
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">html+css笔记</h1>
+<div class="title-right">
+    <a href="https://suseloo.github.io/gitweb" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/suseloo/gitweb/issues/2" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><h1>网页笔记</h1>
+<h2>HTML</h2>
+<h3>标签</h3>
+<h4>img属性:</h4>
+<ul>
+<li>src:设置一个外部图片的路径</li>
+<li>alt:可以用来设置在图片不能显示时，对图片的描述，不写搜素引擎不收录</li>
+<li>width:修改图片宽度，一般px作为单位</li>
+<li>height:修改图片高度，一般px作为单位</li>
+<li>一般不是自适应不建议设置width和height</li>
+</ul>
+<h4>meta标签</h4>
+<ul>
+<li>搜素引擎在检索页面时，会同时检索页面中的关键词和描述，这2个值不会对页面有影响。</li>
+<li>使用meta标签还可以用来设置网页的关键字</li>
+</ul>
+<div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-kos">&lt;</span><span class="pl-ent">meta</span> <span class="pl-c1">name</span>="<span class="pl-s">keywords</span>" <span class="pl-c1">content</span>="<span class="pl-s">HTML5,JavaScript,前端,Python</span>"<span class="pl-kos">&gt;</span></pre></div>
+<blockquote>
+<p>还可以用来指定网页的描述</p>
+</blockquote>
+<div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-kos">&lt;</span><span class="pl-ent">meta</span> <span class="pl-c1">name</span>="<span class="pl-s">description</span>" <span class="pl-c1">content</span>="<span class="pl-s">发布h5、JS等前端相关的信息。</span>"<span class="pl-kos">&gt;</span></pre></div>
+<blockquote>
+<p>使用meta来做请求重定向 5表示等待时间秒</p>
+</blockquote>
+<div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-kos">&lt;</span><span class="pl-ent">meta</span> <span class="pl-c1">http-equiv</span>="<span class="pl-s">refresh</span>" <span class="pl-c1">content</span>="<span class="pl-s">5;url=http://www.baidu.com</span>"<span class="pl-kos">&gt;</span></pre></div>
+<p><a href="https://www.w3school.com.cn/tags/tag_meta.asp" rel="nofollow">meta全部配置</a></p>
+<hr>
+<h1>CSS</h1>
+<h3>选择器</h3>
+<p><strong>元素选择器</strong></p>
+<ul>
+<li>作用：通过元素选择器可以选择页面中的所有指定元素</li>
+</ul>
+<div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-kos">&lt;</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+p{
+	color:red;
+}
+<span class="pl-kos">&lt;/</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>测试文本<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>测试文本<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>测试文本<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span></pre></div>
+<h4><strong>id选择器</strong></h4>
+<ul>
+<li>通过元素的id属性值选中唯一的一个元素
+<ul>
+<li>语法：</li>
+<li>#id属性值{}</li>
+</ul>
+</li>
+</ul>
+<h4><strong>id选择器不能选择组，因为id是唯一的</strong></h4>
+<div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-kos">&lt;</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+#p1{
+	font-size:20px;
+}
+<span class="pl-kos">&lt;/</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>测试文本<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">p</span> <span class="pl-c1">id</span>="<span class="pl-s">p1</span>"<span class="pl-kos">&gt;</span>测试文本<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>测试文本<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span></pre></div>
+<h4><strong>类选择器</strong></h4>
+<ul>
+<li>通过元素的class属性值选中一组元素
+<ul>
+<li>语法：</li>
+<li>.class属性值{}</li>
+</ul>
+</li>
+</ul>
+<div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-kos">&lt;</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+.p1{
+	font-size:20px;
+}
+.p2{
+	color:blue;
+}
+<span class="pl-kos">&lt;/</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">p</span> <span class="pl-c1">id</span>="<span class="pl-s">p1</span>"<span class="pl-kos">&gt;</span>测试文本<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">p</span> <span class="pl-c1">class</span>="<span class="pl-s">p1</span>"<span class="pl-kos">&gt;</span>测试文本<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">p</span> <span class="pl-c1">class</span>="<span class="pl-s">p1 p2</span>"<span class="pl-kos">&gt;</span>测试文本<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span></pre></div>
+<h4><strong>选择器分组</strong></h4>
+<ul>
+<li>通过选择器分组可以同时选中多个选择器对应的元素
+<ul>
+<li>语法：</li>
+<li>选择器1，选择器2，选择器N{}</li>
+</ul>
+</li>
+<li>也叫并集选择器</li>
+</ul>
+<div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-kos">&lt;</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+#p1,.p1{
+	color:yellow;
+}
+
+<span class="pl-kos">&lt;/</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">p</span> <span class="pl-c1">id</span>="<span class="pl-s">p1</span>"<span class="pl-kos">&gt;</span>测试文本<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">p</span> <span class="pl-c1">class</span>="<span class="pl-s">p1</span>"<span class="pl-kos">&gt;</span>测试文本<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">p</span> <span class="pl-c1">class</span>="<span class="pl-s">p1 p2</span>"<span class="pl-kos">&gt;</span>测试文本<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span></pre></div>
+<h4><strong>复合选择器</strong></h4>
+<ul>
+<li>作用：可以选中同时满足多个选择器的元素
+<ul>
+<li>语法：</li>
+<li>选择器1选择器2选择器N{}</li>
+</ul>
+</li>
+<li>为拥有class p3 的span元素设置一个背景，即其他元素的class p3不被改变</li>
+</ul>
+<div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-kos">&lt;</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+span.p3{
+	color:yellow;
+}
+
+<span class="pl-kos">&lt;/</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">p</span> <span class="pl-c1">id</span>="<span class="pl-s">p1</span>"<span class="pl-kos">&gt;</span>测试文本<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">p</span> <span class="pl-c1">class</span>="<span class="pl-s">p1</span>"<span class="pl-kos">&gt;</span>测试文本<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">p</span> <span class="pl-c1">class</span>="<span class="pl-s">p1 p2 p3</span>"<span class="pl-kos">&gt;</span>测试文本<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">span</span> <span class="pl-c1">class</span>="<span class="pl-s">p3</span>"<span class="pl-kos">&gt;</span>测试文本<span class="pl-kos">&lt;/</span><span class="pl-ent">span</span><span class="pl-kos">&gt;</span></pre></div>
+<h4><strong>后代元素选择器</strong></h4>
+<ul>
+<li>作用：
+<ul>
+<li>选中指定元素的指定后代元素</li>
+</ul>
+</li>
+<li>语法：
+<ul>
+<li>祖先元素 后代元素{}</li>
+</ul>
+</li>
+</ul>
+<div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-kos">&lt;</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+	div span{
+		color:green;
+	}
+<span class="pl-kos">&lt;/</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+
+<span class="pl-kos">&lt;</span><span class="pl-ent">div</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;</span><span class="pl-ent">span</span><span class="pl-kos">&gt;</span>div下的span<span class="pl-kos">&lt;/</span><span class="pl-ent">span</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span><span class="pl-kos">&lt;</span><span class="pl-ent">span</span><span class="pl-kos">&gt;</span>div下的p下的span<span class="pl-kos">&lt;/</span><span class="pl-ent">span</span><span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;/</span><span class="pl-ent">div</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">span</span><span class="pl-kos">&gt;</span>body下的span<span class="pl-kos">&lt;/</span><span class="pl-ent">span</span><span class="pl-kos">&gt;</span></pre></div>
+<h4><strong>子元素选择器</strong></h4>
+<ul>
+<li>作用：
+<ul>
+<li>选中指定父元素的指定子元素</li>
+</ul>
+</li>
+<li>语法：
+<ul>
+<li>父元素 &gt; 子元素</li>
+</ul>
+</li>
+</ul>
+<div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-kos">&lt;</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+	div&gt;span{
+		color:green;
+	}
+<span class="pl-kos">&lt;/</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+
+<span class="pl-kos">&lt;</span><span class="pl-ent">div</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;</span><span class="pl-ent">span</span><span class="pl-kos">&gt;</span>div下的span<span class="pl-kos">&lt;/</span><span class="pl-ent">span</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span><span class="pl-kos">&lt;</span><span class="pl-ent">span</span><span class="pl-kos">&gt;</span>div下的p下的span<span class="pl-kos">&lt;/</span><span class="pl-ent">span</span><span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;/</span><span class="pl-ent">div</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">span</span><span class="pl-kos">&gt;</span>body下的span<span class="pl-kos">&lt;/</span><span class="pl-ent">span</span><span class="pl-kos">&gt;</span></pre></div>
+<h4><strong>伪类选择器</strong></h4>
+<ul>
+<li>伪类专门用来表示元素的一种特殊的状态</li>
+<li>比如：访问过的超链接，比如普通的超链接，比如获取焦点的文本框</li>
+<li>当我们需要为处在这些特殊状态的元素设置样式时，就可以使用伪类</li>
+<li>正常链接	a:link</li>
+<li>访问过的链接	a:visited(只能定义字体颜色)</li>
+<li>鼠标滑过的链接		a:hover</li>
+<li>正在点击的链接		a:active</li>
+<li>获取焦点		:focus</li>
+<li>指定元素前	:before</li>
+<li>指定元素后	:after</li>
+<li>选中的元素	::selection  火狐浏览器需要写::-moz-selection</li>
+<li>-由于涉及到用户的隐私问题，所以visited伪类只能设置字体颜色</li>
+<li>hover和active也可以绑定其他暗元素
+<ul>
+<li>首字母：:first-letter</li>
+<li>首行：:first-line</li>
+<li>开始标签尖括号之后：:before</li>
+<li>一般before都需要结合content样式一起使用</li>
+<li>通过content可以向before或after的位置添加一些</li>
+</ul>
+</li>
+</ul>
+<div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-kos">&lt;</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+	p:first-letter{
+		color: red;
+	}
+	p:first-line{
+		background-color: yellow;
+	}
+	p::before{
+		content: "中国";
+		color:red;
+	}
+	p::after{
+		content: "&lt;font&gt;结尾&lt;font&gt;";
+		color: red;
+	}
+	
+<span class="pl-kos">&lt;/</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span></pre></div>
+<h4><strong>属性选择器</strong></h4>
+<ul>
+<li>假设设置所有具有title属性得p元素，设置一个背景颜色</li>
+<li>语法：
+<ul>
+<li>[属性名] 选取含有指定属性得元素</li>
+<li>[属性名="属性值"] 选取含有<strong>指定属性值</strong>的元素</li>
+<li>[属性名^="属性值"] 选取属性值以指定内容<strong>开头</strong>的元素</li>
+<li>[属性名$="属性值"] 选取属性值以指定内容<strong>结尾</strong>的元素</li>
+<li>[属性名*="属性值"] 选取属性值以指定内容<strong>包含</strong>的元素</li>
+</ul>
+</li>
+</ul>
+<div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-kos">&lt;</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+	p[title]{
+		background-color: yellow;
+	}
+	p[title="abc"]{
+		background-color: red;
+	}
+	p[title^=ab]{
+		background-color: green;
+	}
+	p[title$=c]{
+		background-color:red;
+	}
+	p[title*=b]{
+		background-color: aqua;
+	}
+<span class="pl-kos">&lt;/</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+
+<span class="pl-kos">&lt;</span><span class="pl-ent">p</span> <span class="pl-c1">title</span>="<span class="pl-s">hello c</span>"<span class="pl-kos">&gt;</span>一个段落<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">p</span> <span class="pl-c1">title</span>="<span class="pl-s">abd</span>"<span class="pl-kos">&gt;</span>一个段落<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">p</span> <span class="pl-c1">title</span>="<span class="pl-s">abc</span>"<span class="pl-kos">&gt;</span>一个段落<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span></pre></div>
+<h4><strong>其他子元素选择器</strong></h4>
+<ul>
+<li>:first-child	选择第一个子标签</li>
+<li>:last-child		选择最后一个子标签</li>
+<li>:nth-child(参数)		选择指定位置的子元素(指定数值或者even偶数和add奇数)</li>
+<li>:first-of-type	:last-of-type	:nth-of-type	选择指定类型的子元素</li>
+</ul>
+<div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-c1">&lt;!DOCTYPE html<span class="pl-kos">&gt;</span></span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">html</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;</span><span class="pl-ent">head</span><span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;</span><span class="pl-ent">meta</span> <span class="pl-c1">charset</span>="<span class="pl-s">utf-8</span>" /&gt;
+		<span class="pl-kos">&lt;</span><span class="pl-ent">title</span><span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">title</span><span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+			/* 会选中第一个p标签和div中的第一个p标签 */
+			/* p:first-child{
+				background-color: yellow;
+			} */
+			
+			/* 会选中最后一个p标签 div中的最后一个 */
+			/* p:last-child{
+				background-color: yellow;
+			} */
+			
+			/* even选中偶数，add选中单数，也可以用阿拉伯数值指定 */
+			/* p:nth-child(even){
+				background-color: yellow;
+			} */
+			
+			/* 选中第一个 包括div中的第一个p元素 */
+			/* p:first-of-type{
+				background-color: yellow;
+			} */
+			
+			/* 选中最后一个 包括div中的最后一个 */
+			/* p:last-of-type{
+				background-color: yellow;
+			} */
+			
+			/* 选中偶数  包括div中的偶数 add基数  或阿拉伯数值*/
+			p:nth-of-type(even){
+				background-color: yellow;
+			}
+			
+		<span class="pl-kos">&lt;/</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;/</span><span class="pl-ent">head</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;</span><span class="pl-ent">body</span><span class="pl-kos">&gt;</span>
+		
+		<span class="pl-kos">&lt;</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>p标签<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>p标签<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>p标签<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>p标签<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>p标签<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;</span><span class="pl-ent">div</span><span class="pl-kos">&gt;</span>
+			<span class="pl-kos">&lt;</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>div中p标签<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>
+			<span class="pl-kos">&lt;</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>div中p标签<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>
+			<span class="pl-kos">&lt;</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>div中p标签<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;/</span><span class="pl-ent">div</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;/</span><span class="pl-ent">body</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;/</span><span class="pl-ent">html</span><span class="pl-kos">&gt;</span></pre></div>
+<h4><strong>兄弟元素选择器</strong></h4>
+<div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-c1">&lt;!DOCTYPE html<span class="pl-kos">&gt;</span></span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">html</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;</span><span class="pl-ent">head</span><span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;</span><span class="pl-ent">meta</span> <span class="pl-c1">charset</span>="<span class="pl-s">utf-8</span>" /&gt;
+		<span class="pl-kos">&lt;</span><span class="pl-ent">title</span><span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">title</span><span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+			/* 选中span标签后一个p元素 */
+			/* span + p{
+				background-color: yellow;
+			} */
+			
+			/* 选中span后所有p标签 */
+			span ~ p{
+				background-color: yellow;
+			}
+		<span class="pl-kos">&lt;/</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;/</span><span class="pl-ent">head</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;</span><span class="pl-ent">body</span><span class="pl-kos">&gt;</span>
+		
+		<span class="pl-kos">&lt;</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>p标签<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>p标签<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;</span><span class="pl-ent">span</span><span class="pl-kos">&gt;</span>span标签<span class="pl-kos">&lt;/</span><span class="pl-ent">span</span><span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>p标签<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>p标签<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;/</span><span class="pl-ent">body</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;/</span><span class="pl-ent">html</span><span class="pl-kos">&gt;</span></pre></div>
+<h4><strong>否定选择器</strong></h4>
+<div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-c1">&lt;!DOCTYPE html<span class="pl-kos">&gt;</span></span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">html</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;</span><span class="pl-ent">head</span><span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;</span><span class="pl-ent">meta</span> <span class="pl-c1">charset</span>="<span class="pl-s">utf-8</span>" /&gt;
+		<span class="pl-kos">&lt;</span><span class="pl-ent">title</span><span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">title</span><span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+			/* 除了.hello的p标签外 */
+			p:not(.hello){
+				background-color: yellow;
+			}
+		<span class="pl-kos">&lt;/</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;/</span><span class="pl-ent">head</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;</span><span class="pl-ent">body</span><span class="pl-kos">&gt;</span>
+		
+		<span class="pl-kos">&lt;</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>p标签<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;</span><span class="pl-ent">p</span> <span class="pl-c1">class</span>="<span class="pl-s">hello</span>"<span class="pl-kos">&gt;</span>p标签<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>p标签<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>p标签<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;/</span><span class="pl-ent">body</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;/</span><span class="pl-ent">html</span><span class="pl-kos">&gt;</span></pre></div>
+<h4><strong>集成样式</strong></h4>
+<ul>
+<li>像儿子可以继承父亲的遗产一样，在CSS中，祖先元素上的样式，也会被后代元素继承</li>
+<li>但是并不是所有的样式都会被子元素继承，比如：背景相关的样式，在CSS手册中搜素background-color查看是否继承，因为其标签属性是透明的transparent所以表面上看还是有背景色</li>
+</ul>
+<h4>**选择器的优先级</h4>
+<ul>
+<li>优先级的规则
+<ul>
+<li>内联样式，优先级	1000</li>
+<li>ID选择器，优先级	100</li>
+<li>类和伪类，优先级	10</li>
+<li>元素选择器，优先级	1</li>
+<li>通配*，优先级		0</li>
+<li>继承样式，没有优先级</li>
+</ul>
+</li>
+<li>当包含多种选择器时 会将优先级相加获得新的优先级，并集选择器是单独计算</li>
+<li>当一个样式后面加上 !important优先级会被提升</li>
+</ul>
+<h4><strong>字体</strong></h4>
+<ul>
+<li>一般指定为font-family的最后一个字体</li>
+<li>字体分为五大类</li>
+<li>serif(衬线字体)</li>
+<li>sans-serif(非衬线字体)</li>
+<li>monospace(等宽字体)</li>
+<li>cursive(草书字体)</li>
+<li>fantasy(虚幻字体)</li>
+</ul>
+<div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-c1">&lt;!DOCTYPE html<span class="pl-kos">&gt;</span></span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">html</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;</span><span class="pl-ent">head</span><span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;</span><span class="pl-ent">meta</span> <span class="pl-c1">charset</span>="<span class="pl-s">utf-8</span>" /&gt;
+		<span class="pl-kos">&lt;</span><span class="pl-ent">title</span><span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">title</span><span class="pl-kos">&gt;</span>
+		
+	<span class="pl-kos">&lt;/</span><span class="pl-ent">head</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;</span><span class="pl-ent">body</span><span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+			p[title]{
+				font-family:arial,微软雅黑,serif;
+			}
+		<span class="pl-kos">&lt;/</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+		
+		<span class="pl-kos">&lt;</span><span class="pl-ent">p</span> <span class="pl-c1">style</span>="<span class="pl-s">font-size:40px;font-family:serif</span>"<span class="pl-kos">&gt;</span>衬线字体ABCDEFabcdef<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;</span><span class="pl-ent">p</span> <span class="pl-c1">style</span>="<span class="pl-s">font-size:40px;font-family:sans-serif</span>"<span class="pl-kos">&gt;</span>非衬线字体ABCDEFabcdef<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;</span><span class="pl-ent">p</span> <span class="pl-c1">style</span>="<span class="pl-s">font-size:40px;font-family:monospace</span>"<span class="pl-kos">&gt;</span>等宽字体ABCDEFabcdef<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;</span><span class="pl-ent">p</span> <span class="pl-c1">style</span>="<span class="pl-s">font-size:40px;font-family:cursive</span>"<span class="pl-kos">&gt;</span>草书字体ABCDEFabcdef<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;</span><span class="pl-ent">p</span> <span class="pl-c1">style</span>="<span class="pl-s">font-size:40px;font-family:fantasy</span>"<span class="pl-kos">&gt;</span>虚幻字体ABCDEFabcdef<span class="pl-kos">&lt;/</span><span class="pl-ent">p</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;/</span><span class="pl-ent">body</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;/</span><span class="pl-ent">html</span><span class="pl-kos">&gt;</span></pre></div>
+<h4><strong>行高</strong></h4>
+<ul>
+<li>行间距line-height = 行高 - 字体大小</li>
+</ul>
+<div class="highlight highlight-source-css"><pre class="notranslate">.<span class="pl-c1">x1</span>{
+	<span class="pl-c1">font-size</span><span class="pl-kos">:</span> <span class="pl-c1">20<span class="pl-smi">px</span></span>;
+	<span class="pl-c">/* 1.数值 行间距等于40px-20px=20px */</span>
+	<span class="pl-c1">line-height</span><span class="pl-kos">:</span> <span class="pl-c1">40<span class="pl-smi">px</span></span>;
+	<span class="pl-c">/* 2.字体大小的倍数  常用*/</span>
+	<span class="pl-c1">line-height</span><span class="pl-kos">:</span> <span class="pl-c1">1</span>;
+	<span class="pl-c">/* 3.字体大小的百分比 */</span>
+	<span class="pl-c1">line-height</span><span class="pl-kos">:</span> <span class="pl-c1">200<span class="pl-smi">%</span></span>;
+	
+	<span class="pl-c">/* 30px字体大小 50pxline-height 行高=50-30 不指定行高则使用默认值 */</span>
+	<span class="pl-c1">font</span><span class="pl-kos">:</span><span class="pl-c1">30</span>px/50px <span class="pl-s">"微软雅黑"</span>
+}</pre></div>
+<h3><strong>盒模型</strong></h3>
+<h4><strong>边框样式</strong></h4>
+<ul>
+<li>为元素设置边框</li>
+<li>要为一个元素设置边框必须指定三个样式</li>
+<li>border-width:边框的宽度</li>
+<li>border-color:边框的演示</li>
+<li>border-style:边框的样式<br>
+<a href="https://www.runoob.com/css/css-border.html" rel="nofollow">边框的其他所有属性</a></li>
+</ul>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>border</td>
+<td>简写属性，用于把针对四个边的属性设置在一个声明。</td>
+</tr>
+<tr>
+<td>border-style</td>
+<td>用于设置元素所有边框的样式，或者单独地为各边设置边框样式。</td>
+</tr>
+<tr>
+<td>border-width</td>
+<td>简写属性，用于为元素的所有边框设置宽度，或者单独地为各边边框设置宽度。</td>
+</tr>
+<tr>
+<td>border-color</td>
+<td>简写属性，设置元素的所有边框中可见部分的颜色，或为 4 个边分别设置颜色。</td>
+</tr>
+<tr>
+<td>border-bottom</td>
+<td>简写属性，用于把下边框的所有属性设置到一个声明中。</td>
+</tr>
+<tr>
+<td>border-bottom-color</td>
+<td>设置元素的下边框的颜色。</td>
+</tr>
+<tr>
+<td>border-bottom-style</td>
+<td>设置元素的下边框的样式。</td>
+</tr>
+<tr>
+<td>border-bottom-width</td>
+<td>设置元素的下边框的宽度。</td>
+</tr>
+<tr>
+<td>border-left</td>
+<td>简写属性，用于把左边框的所有属性设置到一个声明中。</td>
+</tr>
+<tr>
+<td>border-left-color</td>
+<td>设置元素的左边框的颜色。</td>
+</tr>
+<tr>
+<td>border-left-style</td>
+<td>设置元素的左边框的样式。</td>
+</tr>
+<tr>
+<td>border-left-width</td>
+<td>设置元素的左边框的宽度。</td>
+</tr>
+<tr>
+<td>border-right</td>
+<td>简写属性，用于把右边框的所有属性设置到一个声明中。</td>
+</tr>
+<tr>
+<td>border-right-color</td>
+<td>设置元素的右边框的颜色。</td>
+</tr>
+<tr>
+<td>border-right-style</td>
+<td>设置元素的右边框的样式。</td>
+</tr>
+<tr>
+<td>border-right-width</td>
+<td>设置元素的右边框的宽度。</td>
+</tr>
+<tr>
+<td>border-top</td>
+<td>简写属性，用于把上边框的所有属性设置到一个声明中。</td>
+</tr>
+<tr>
+<td>border-top-color</td>
+<td>设置元素的上边框的颜色。</td>
+</tr>
+<tr>
+<td>border-top-style</td>
+<td>设置元素的上边框的样式。</td>
+</tr>
+<tr>
+<td>border-top-width</td>
+<td>设置元素的上边框的宽度。</td>
+</tr>
+<tr>
+<td>border-radius</td>
+<td>设置圆角的边框。</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<div class="highlight highlight-text-html-basic"><pre class="notranslate">		<span class="pl-kos">&lt;</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+	.box1{
+		/* width 和 height 设置的大小是内容区的大小 不包括boerder的 边框则x2计算 */
+		width: 100px;
+		height: 100px;
+		background-color: aqua;
+		
+		border: 10px red solid;
+		/*             上   右	下	 左 */
+		border-width: 10px 20px 40px 80px;
+		/* 			   上  左右  下 */
+		border-width: 10px 20px 40px;
+		/* 			 上下	左右 */
+		border-width: 10px 50px; 
+		
+		/* 同上多种设置*/
+		border-color:red;
+		border-style:none;
+	}
+<span class="pl-kos">&lt;/</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">div</span> <span class="pl-c1">class</span>="<span class="pl-s">box1</span>"<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">div</span><span class="pl-kos">&gt;</span></pre></div>
+<h4><strong>内边距</strong></h4>
+<ul>
+<li>padding 内边距会影响盒子的大小，背景会衍生到内边距</li>
+</ul>
+<div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-kos">&lt;</span><span class="pl-ent">body</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+		.box1{
+			/* width 和 height 设置的大小是内容区的大小 不包括boerder的 边框则x2计算 */
+			width: 200px;
+			height: 200px;
+			background-color: aqua;
+			border: 10px solid red;
+			
+			padding-top: 100px;
+			
+		}
+		.box2{
+			width: 100%;
+			height: 100%;
+			background-color: yellow;
+		}
+	<span class="pl-kos">&lt;/</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;</span><span class="pl-ent">div</span> <span class="pl-c1">class</span>="<span class="pl-s">box1</span>"<span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;</span><span class="pl-ent">div</span> <span class="pl-c1">class</span>="<span class="pl-s">box2</span>"<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">div</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;/</span><span class="pl-ent">div</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;/</span><span class="pl-ent">body</span><span class="pl-kos">&gt;</span></pre></div>
+<h4>外边距</h4>
+<ul>
+<li>超过父元素会被撑出去</li>
+<li>以父元素内容区域为准，不管父元素的border边框数值</li>
+<li>设置上和左的外边距会改变自身的位置，而右和下会改变其他盒子的位置</li>
+<li>margin也可以是负值，也可以是auto一般给左右水平方向使用，auto为最大值</li>
+<li>如果将左和右同时设置成auto，那将各占一般，也就达到居中效果</li>
+</ul>
+<div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-kos">&lt;</span><span class="pl-ent">body</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+		.box1{
+			/* width 和 height 设置的大小是内容区的大小 不包括boerder的 边框则x2计算 */
+			width: 200px;
+			height: 200px;
+			background-color: aqua;
+			border: 10px solid red;
+			
+			padding-top: 10px;
+			
+		}
+		.box2{
+			width: 90px;
+			height: 90px;
+			background-color: yellow;
+			border: 10px green solid;
+			/* margin-left: 10px; */
+			/* 按最小值来 大于现有的值将不做改变 */
+			margin-right: 10px;
+			/* bottom和right会把自身以外的盒子挤走 */
+			margin-bottom: 10px;
+			
+		}
+		.box3{
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+			/* 根据auto左右各占一半特性 可以设置成居中效果 */
+			margin: 0 auto;
+		}
+	<span class="pl-kos">&lt;/</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;</span><span class="pl-ent">div</span> <span class="pl-c1">class</span>="<span class="pl-s">box1</span>"<span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;</span><span class="pl-ent">div</span> <span class="pl-c1">class</span>="<span class="pl-s">box2</span>"<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">div</span><span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;</span><span class="pl-ent">div</span> <span class="pl-c1">class</span>="<span class="pl-s">box3</span>"<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">div</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;/</span><span class="pl-ent">div</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;/</span><span class="pl-ent">body</span><span class="pl-kos">&gt;</span></pre></div>
+<ul>
+<li>在相邻的兄弟元素垂直方向的外边距，会产生外边距重叠，会取最大值</li>
+<li>只要时相邻的垂直方向 哪怕是父元素也会一同向下或向上
+<ul>
+<li>方法一：解决父元素外边距与子元素重叠问题可以通过对子元素设置border-top或者padding-top来解决，但是要减掉对于的px</li>
+<li>方法二：可以通过对父元素设置padding-top对子元素进行下移，但是padding会撑大本身的尺寸，所以在设置padding时减掉对于的宽高</li>
+<li>方法三：后续有更好的方法</li>
+</ul>
+</li>
+</ul>
+<div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-kos">&lt;</span><span class="pl-ent">body</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+		.box1{
+			/* width 和 height 设置的大小是内容区的大小 不包括boerder的 边框则x2计算 */
+			background-color:green;
+		}
+		.box2{
+			/* 只要时相邻的垂直方向 哪怕时父元素也会一同向下或向上 */
+			margin-top: 100px;
+			
+			width: 100px;
+			height: 100px;
+			background-color: yellow;
+			margin-bottom: 100px;
+			
+		}
+		.box3{
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+			/* 当上面兄弟元素设置margin-bottom100px 再设置本元素margin-top时出发重叠 数值一样或小于兄弟元素的情况保持不变 */
+			margin-top: 90px;
+		}
+	<span class="pl-kos">&lt;/</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;</span><span class="pl-ent">div</span> <span class="pl-c1">class</span>="<span class="pl-s">box1</span>"<span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;</span><span class="pl-ent">div</span> <span class="pl-c1">class</span>="<span class="pl-s">box2</span>"<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">div</span><span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;</span><span class="pl-ent">div</span> <span class="pl-c1">class</span>="<span class="pl-s">box3</span>"<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">div</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;/</span><span class="pl-ent">div</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;/</span><span class="pl-ent">body</span><span class="pl-kos">&gt;</span></pre></div>
+<h4>内联盒子模型</h4>
+<ul>
+<li>内联元素a、span等无法直接使用width和height设置尺寸</li>
+<li>内边距、边框水平方向的设置会影响页面布局、垂直方向不会影响其他元素布局(会覆盖掉其他元素)</li>
+<li>外边距水平方向不会重叠，而是求和，内联元素不支持垂直方向的设置</li>
+<li>垂直方向的内边距可以设置但是不会改变内部布局</li>
+</ul>
+<h4>display与visibility</h4>
+<ul>
+<li>display可以修改一个元素的类型</li>
+<li>none值可以隐藏元素，位置也会不在 inline-block值设置为行内块  不独占一行</li>
+<li>visibility 默认显示值visible，hidden隐藏元素，但是位置还在</li>
+</ul>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>none</td>
+<td>此元素不会被显示。</td>
+</tr>
+<tr>
+<td>block</td>
+<td>此元素将显示为块级元素，此元素前后会带有换行符。</td>
+</tr>
+<tr>
+<td>inline</td>
+<td>默认。此元素会被显示为内联元素，元素前后没有换行符。</td>
+</tr>
+<tr>
+<td>inline-block</td>
+<td>行内块元素。（CSS2.1 新增的值）</td>
+</tr>
+<tr>
+<td>list-item</td>
+<td>此元素会作为列表显示。</td>
+</tr>
+<tr>
+<td>run-in</td>
+<td>此元素会根据上下文作为块级元素或内联元素显示。</td>
+</tr>
+<tr>
+<td>compact</td>
+<td>CSS 中有值 compact，不过由于缺乏广泛支持，已经从 CSS2.1 中删除。</td>
+</tr>
+<tr>
+<td>marker</td>
+<td>CSS 中有值 marker，不过由于缺乏广泛支持，已经从 CSS2.1 中删除。</td>
+</tr>
+<tr>
+<td>table</td>
+<td>此元素会作为块级表格来显示（类似 &lt;table&gt;），表格前后带有换行符。</td>
+</tr>
+<tr>
+<td>inline-table</td>
+<td>此元素会作为内联表格来显示（类似 &lt;table&gt;），表格前后没有换行符。</td>
+</tr>
+<tr>
+<td>table-row-group</td>
+<td>此元素会作为一个或多个行的分组来显示（类似 &lt;table&gt;）。</td>
+</tr>
+<tr>
+<td>table-header-group</td>
+<td>此元素会作为一个或多个行的分组来显示（类似 &lt;thead&gt;）。</td>
+</tr>
+<tr>
+<td>table-footer-group</td>
+<td>此元素会作为一个或多个行的分组来显示（类似 &lt;tfoot&gt;）。</td>
+</tr>
+<tr>
+<td>table-row</td>
+<td>此元素会作为一个表格行显示（类似 &lt;tr&gt;）。</td>
+</tr>
+<tr>
+<td>table-column-group</td>
+<td>此元素会作为一个或多个列的分组来显示（类似 &lt;colgroup&gt;）。</td>
+</tr>
+<tr>
+<td>table-column</td>
+<td>此元素会作为一个单元格列显示（类似 &lt;col&gt;）</td>
+</tr>
+<tr>
+<td>table-cell</td>
+<td>此元素会作为一个表格单元格显示（类似 &lt;td&gt; 和 &lt;th&gt;）</td>
+</tr>
+<tr>
+<td>table-caption</td>
+<td>此元素会作为一个表格标题显示（类似 &lt;caption&gt;）</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 display 属性的值。</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<h4>overflow</h4>
+<ul>
+<li>如果子元素的尺寸大于父元素的尺寸，会导致子元素溢出，overflow就可以处理溢出的内容</li>
+</ul>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>visible</td>
+<td>默认值。内容不会被修剪，会呈现在元素框之外。</td>
+</tr>
+<tr>
+<td>hidden</td>
+<td>内容会被修剪，并且其余内容是不可见的。</td>
+</tr>
+<tr>
+<td>scroll</td>
+<td>内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。</td>
+</tr>
+<tr>
+<td>auto</td>
+<td>如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 overflow 属性的值。</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-kos">&lt;</span><span class="pl-ent">body</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+		.box1{
+			width: 200px;
+			height: 200px;
+			background-color: yellow;
+			
+			overflow: scroll;
+		}
+		.box2{
+			width: 100px;
+			height: 500px;
+			background-color: green;
+		}
+	<span class="pl-kos">&lt;/</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;</span><span class="pl-ent">div</span> <span class="pl-c1">class</span>="<span class="pl-s">box1</span>"<span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;</span><span class="pl-ent">div</span> <span class="pl-c1">class</span>="<span class="pl-s">box2</span>"<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">div</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;/</span><span class="pl-ent">div</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;/</span><span class="pl-ent">body</span><span class="pl-kos">&gt;</span></pre></div>
+<h4>文档流</h4>
+<ul>
+<li>文档流处于网页的最底层，属于地基层，所有创建的元素都在这层上面，默认都在文档流里</li>
+<li><code class="notranslate">在文档流中，块元素的子元素在不设置宽度的情况下默认占父元素的100%,如果设置了float就不生效，只被内容撑开</code></li>
+<li><code class="notranslate">内联元素如果开启float则与块元素相反，设置的宽高将会被生效</code></li>
+<li>元素在文档流中的特点</li>
+<li>块元素
+<ul>
+<li>块元素在文档流中会独占一行，块元素会自上而下排列</li>
+<li>块元素在文档流中默认宽度是父元素的100%</li>
+<li>当元素的高度或宽度的值为auto时，此时指定内边距不是影响可见宽的大小，而是会自动修改宽度,高度只被内容撑开，以适应内边距</li>
+<li>块元素在文档流中的高度默认被内容或子元素撑开，</li>
+</ul>
+</li>
+<li>内联元素
+<ul>
+<li>内联元素在文档流中只占自身的大小，会默认从左向右排列，如果一行中不足以容纳会换到下一行继续自左向右</li>
+<li>在文档流中，内联元素的宽度和高度默认都被内容撑开</li>
+</ul>
+</li>
+</ul>
+<h4>浮动</h4>
+<ul>
+<li>让3个盒子并排显示  会产生缝隙 块元素与块元素之间写法只能挨着才不会右缝隙</li>
+<li>想要脱离文档流 可以使用浮动,遇到父元素或者其他浮动元素就停止浮动</li>
+<li><code class="notranslate">浮动的元素不会盖住兄弟元素P标签里面的文字</code></li>
+<li><code class="notranslate">在文档流中，块元素的子元素在不设置宽度的情况下默认占父元素的100%,如果设置了float就不生效，只被内容撑开</code></li>
+<li><code class="notranslate">内联元素如果开启float脱离文档流则与块元素相反，设置的宽高将会被生效</code></li>
+<li>一旦脱离文档流，都详单与是快元素</li>
+</ul>
+<div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-kos">&lt;</span><span class="pl-ent">body</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+		.box1{
+			/* 让3个盒子并排显示  会产生缝隙 块元素与块元素之间写法只能挨着才不会右缝隙
+				目前处于文档流里面
+				想要脱离文档流 可以使用浮动
+				遇到父元素或者其他浮动元素就停止浮动
+			 */
+			/* display:inline-block; */
+			
+			width: 100px;
+			height: 100px;
+			background-color:green;
+			
+			float: left;
+		}
+		.box2{
+			/* display:inline-block; */
+			
+			width: 100px;
+			height: 100px;
+			background-color: yellow;
+			
+			float: left;
+		}
+		.box3{
+			/* display:inline-block; */
+			
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+			
+			float: left;
+		}
+	<span class="pl-kos">&lt;/</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;</span><span class="pl-ent">div</span> <span class="pl-c1">class</span>="<span class="pl-s">box1</span>"<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">div</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;</span><span class="pl-ent">div</span> <span class="pl-c1">class</span>="<span class="pl-s">box2</span>"<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">div</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;</span><span class="pl-ent">div</span> <span class="pl-c1">class</span>="<span class="pl-s">box3</span>"<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">div</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;/</span><span class="pl-ent">body</span><span class="pl-kos">&gt;</span></pre></div>
+<h4>简单布局案例</h4>
+<ul>
+<li>遵循大盒套小盒、小盒套小小盒，一层层往里面套</li>
+</ul>
+<div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-kos">&lt;</span><span class="pl-ent">body</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.header{
+			width: 1000px;
+			height: 120px;
+			background-color: #baf;
+			margin: 0 auto;
+		}
+		.center{
+			width: 1000px;
+			height: 680px;
+			background-color: pink;
+			margin: 10px auto;
+		}
+		.center .left{
+			width: 300px;
+			height: 100%;
+			background-color: yellow;
+			float: left;
+		}
+		.center .cent{
+			width: 380px;
+			height: 100%;
+			background-color: green;
+			float: left;
+			margin: 0 10px;
+		}
+		.center .right{
+			width: 300px;
+			height: 100%;
+			background-color: red;
+			float: left;
+		}
+		.footer{
+			width: 1000px;
+			height: 100px;
+			background-color: black;
+			margin: 0 auto;
+			clear:none
+		}
+	<span class="pl-kos">&lt;/</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+	<span class="pl-c">&lt;!-- header头部 --&gt;</span>
+	<span class="pl-kos">&lt;</span><span class="pl-ent">div</span> <span class="pl-c1">class</span>="<span class="pl-s">header</span>"<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">div</span><span class="pl-kos">&gt;</span>
+	
+	<span class="pl-c">&lt;!-- center中间内容区域 --&gt;</span>
+	<span class="pl-kos">&lt;</span><span class="pl-ent">div</span> <span class="pl-c1">class</span>="<span class="pl-s">center</span>"<span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;</span><span class="pl-ent">div</span> <span class="pl-c1">class</span>="<span class="pl-s">left</span>"<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">div</span><span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;</span><span class="pl-ent">div</span> <span class="pl-c1">class</span>="<span class="pl-s">cent</span>"<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">div</span><span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;</span><span class="pl-ent">div</span> <span class="pl-c1">class</span>="<span class="pl-s">right</span>"<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">div</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;/</span><span class="pl-ent">div</span><span class="pl-kos">&gt;</span>
+	
+	<span class="pl-c">&lt;!-- footer底部区域 --&gt;</span>
+	<span class="pl-kos">&lt;</span><span class="pl-ent">div</span> <span class="pl-c1">class</span>="<span class="pl-s">footer</span>"<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">div</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;/</span><span class="pl-ent">body</span><span class="pl-kos">&gt;</span></pre></div>
+<h4>高度塌陷问题</h4>
+<ul>
+<li>父元素的宽度不设置默认100%，高度不设置由子元素高度决定</li>
+<li>但是如果给子元素设置了float浮动，父元素将出现塌陷，不会被子元素所撑起</li>
+<li>由于父元素出现了高度塌陷，其父元素以下的所有兄弟元素都会跟着往上移，就会导致页面混乱</li>
+<li><strong><code class="notranslate">解决办法：</code></strong>
+<ul>
+<li>可以将父元素高度写死，不建议使用此方法，因为写死后，父元素将不会根据子元素的高度自适应，且如果子元素高度高出父元素会出现溢出</li>
+<li><strong><code class="notranslate">元素开启BFC功能，BFC的特性</code></strong></li>
+<li><strong><code class="notranslate">父元素的外边距不会和子元素重叠</code></strong></li>
+<li><strong><code class="notranslate">开启BFC的元素不会被浮动元素覆盖</code></strong></li>
+<li><strong><code class="notranslate">开启BFC的元素可以包含浮动的子元素</code></strong></li>
+</ul>
+</li>
+<li><strong><code class="notranslate">如何开启BFC</code></strong>
+<ul>
+<li>设置元素浮动：但是随之宽度也没有了,而且父元素的兄弟元素也会跟着上移</li>
+<li>设置元素绝对定位</li>
+<li>设置元素为display:inlineblock，会导致宽度丢失</li>
+<li><strong><code class="notranslate">推荐：将元素的overflow设置为非visible的值 overflow:auto或hidden;IE7以下用zoom:1</code></strong></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<ul>
+<li><strong><code class="notranslate">解决高度塌陷的最终方案</code></strong></li>
+<li><strong><code class="notranslate">如果自身浮动后，给自己的兄弟元素设置clear属性可以不受影响</code></strong></li>
+<li><strong><code class="notranslate">子元素浮动后，父元素塌陷问题，可以给子元素的最后加上一个兄弟元素并设置clear</code></strong></li>
+<li><strong><code class="notranslate">通过.clearfix:after选择器来设置子元素浮动父元素塌陷问题，里面设置centent:"";display:block;clear:both;</code></strong></li>
+</ul>
+</blockquote>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>none</td>
+<td>元素不会被向下移动以清除浮动。</td>
+</tr>
+<tr>
+<td>left</td>
+<td>元素被向下移动以清除左浮动。</td>
+</tr>
+<tr>
+<td>right</td>
+<td>元素被向下移动以清除右浮动。</td>
+</tr>
+<tr>
+<td>both</td>
+<td>元素被向下移动以清除左右浮动。</td>
+</tr>
+<tr>
+<td>inline-start</td>
+<td>元素被向下移动以清除其包含块的起始侧浮动，即 ltr 时清除左浮动，rtl 时清除右浮动。</td>
+</tr>
+<tr>
+<td>inline-end</td>
+<td>元素被向下移动以清除其包含块的结束侧浮动，即 ltr 时清除右浮动，rtl 时清除左浮动</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<h4>导航条</h4>
+<div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-kos">&lt;</span><span class="pl-ent">body</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.nav{
+			background-color: aquamarine;
+			width: 800px;
+			margin: 50px auto;
+			list-style: none;
+			overflow: auto;
+		}
+		.nav li{
+			background-color: blue;
+			float: left;
+			font-size: 16px;
+			line-height: 32px;
+			text-align: center;
+			
+		}
+		.nav li a{
+			text-decoration: none;
+			color: white;
+			display: block;
+			width: 200px;
+			font-weight: bold;
+			clear
+		}
+		.nav li:hover{
+			background-color: red;
+		}
+		
+	<span class="pl-kos">&lt;/</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;</span><span class="pl-ent">ul</span> <span class="pl-c1">class</span>="<span class="pl-s">nav</span>"<span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;</span><span class="pl-ent">li</span><span class="pl-kos">&gt;</span><span class="pl-kos">&lt;</span><span class="pl-ent">a</span> <span class="pl-c1">href</span>=""<span class="pl-kos">&gt;</span>首页<span class="pl-kos">&lt;/</span><span class="pl-ent">a</span><span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">li</span><span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;</span><span class="pl-ent">li</span><span class="pl-kos">&gt;</span><span class="pl-kos">&lt;</span><span class="pl-ent">a</span> <span class="pl-c1">href</span>=""<span class="pl-kos">&gt;</span>新闻<span class="pl-kos">&lt;/</span><span class="pl-ent">a</span><span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">li</span><span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;</span><span class="pl-ent">li</span><span class="pl-kos">&gt;</span><span class="pl-kos">&lt;</span><span class="pl-ent">a</span> <span class="pl-c1">href</span>=""<span class="pl-kos">&gt;</span>资讯<span class="pl-kos">&lt;/</span><span class="pl-ent">a</span><span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">li</span><span class="pl-kos">&gt;</span>
+		<span class="pl-kos">&lt;</span><span class="pl-ent">li</span><span class="pl-kos">&gt;</span><span class="pl-kos">&lt;</span><span class="pl-ent">a</span> <span class="pl-c1">href</span>=""<span class="pl-kos">&gt;</span>留言<span class="pl-kos">&lt;/</span><span class="pl-ent">a</span><span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">li</span><span class="pl-kos">&gt;</span>
+	<span class="pl-kos">&lt;/</span><span class="pl-ent">ul</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;/</span><span class="pl-ent">body</span><span class="pl-kos">&gt;</span></pre></div>
+<h4>相对定位</h4>
+<ul>
+<li><code class="notranslate">定位：</code></li>
+<li>定位指的就是将指定的元素摆放到页面的任意位置</li>
+<li>通过定位可以任意的摆放元素</li>
+<li>通过position属性来设置元素的定位</li>
+<li><code class="notranslate">relative:相对于元素在文档流中原来的位置进行定位</code></li>
+<li>当元素position属性设置为relative时，则元素开启了相对定位</li>
+<li>1.当开启了元素的相对定位后，而不设置偏移量时，元素不会有任何变化。</li>
+<li>2.可以通过left right 通配bottom四个属性来设置元素的偏移量</li>
+<li>3.相对定位的元素不会脱离文档流</li>
+<li>4.相对定位会使元素提升一个层级</li>
+<li>5.相对定位不会改变元素的性质，块元素还是块元素，内联还是内联</li>
+</ul>
+<markdown-accessiblity-table><table role="table">
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>absolute</td>
+<td>生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。</td>
+</tr>
+<tr>
+<td>fixed</td>
+<td>生成固定定位(绝对定位)的元素，相对于浏览器窗口进行定位。元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。</td>
+</tr>
+<tr>
+<td>relative</td>
+<td>生成相对定位的元素，相对于其正常位置进行定位。因此，"left:20" 会向元素的 LEFT 位置添加 20 像素。</td>
+</tr>
+<tr>
+<td>static</td>
+<td>默认值。没有定位，元素出现在正常的流中（忽略 top, bottom, left, right 或者 z-index 声明）。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>规定应该从父元素继承 position 属性的值。</td>
+</tr>
+</tbody>
+</table></markdown-accessiblity-table>
+<div class="highlight highlight-text-html-basic"><pre class="notranslate"><span class="pl-kos">&lt;</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	.box1{
+		width: 200px;
+		height: 200px;
+		background-color: red;
+	}
+	.box2{
+		width: 200px;
+		height: 200px;
+		background-color: yellow;
+		position: relative;
+		left: 200px;
+		top: 200px;
+	}
+	.box3{
+		width: 200px;
+		height: 200px;
+		background-color: yellowgreen;
+	}
+	
+<span class="pl-kos">&lt;/</span><span class="pl-ent">style</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">div</span> <span class="pl-c1">class</span>="<span class="pl-s">box1</span>"<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">div</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">div</span> <span class="pl-c1">class</span>="<span class="pl-s">box2</span>"<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">div</span><span class="pl-kos">&gt;</span>
+<span class="pl-kos">&lt;</span><span class="pl-ent">div</span> <span class="pl-c1">class</span>="<span class="pl-s">box3</span>"<span class="pl-kos">&gt;</span><span class="pl-kos">&lt;/</span><span class="pl-ent">div</span><span class="pl-kos">&gt;</span></pre></div></div>
+<div style="font-size:small;margin-top:8px;float:right;"></div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://suseloo.github.io/gitweb">拷贝笔记</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if(""!=""){
+    var startSite=new Date("");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","suseloo/gitweb");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+</script>
+
+
+</html>

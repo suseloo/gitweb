@@ -1,5 +1,16 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>拷贝笔记</title><link>https://suseloo.github.io/gitweb</link><description>拷贝笔记-记录我的技术笔记</description><copyright>拷贝笔记</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://suseloo.github.io/gitweb</link></image><lastBuildDate>Thu, 20 Jun 2024 03:11:20 +0000</lastBuildDate><managingEditor>拷贝笔记</managingEditor><ttl>60</ttl><webMaster>拷贝笔记</webMaster><item><title>Python数据库连接</title><link>https://suseloo.github.io/gitweb/post/Python-shu-ju-ku-lian-jie.html</link><description>&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>拷贝笔记</title><link>https://suseloo.github.io/gitweb</link><description>拷贝笔记-记录我的技术笔记</description><copyright>拷贝笔记</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://suseloo.github.io/gitweb</link></image><lastBuildDate>Wed, 24 Jul 2024 13:09:05 +0000</lastBuildDate><managingEditor>拷贝笔记</managingEditor><ttl>60</ttl><webMaster>拷贝笔记</webMaster><item><title>html+css笔记</title><link>https://suseloo.github.io/gitweb/post/html%2Bcss-bi-ji.html</link><description># 网页笔记&#13;
+## HTML&#13;
+### 标签&#13;
+#### img属性:&#13;
+* src:设置一个外部图片的路径 &#13;
+* alt:可以用来设置在图片不能显示时，对图片的描述，不写搜素引擎不收录 &#13;
+* width:修改图片宽度，一般px作为单位 &#13;
+* height:修改图片高度，一般px作为单位 &#13;
+* 一般不是自适应不建议设置width和height &#13;
+&#13;
+#### meta标签&#13;
+* 搜素引擎在检索页面时，会同时检索页面中的关键词和描述，这2个值不会对页面有影响。</description><guid isPermaLink="true">https://suseloo.github.io/gitweb/post/html%2Bcss-bi-ji.html</guid><pubDate>Wed, 24 Jul 2024 12:58:37 +0000</pubDate></item><item><title>Python数据库连接</title><link>https://suseloo.github.io/gitweb/post/Python-shu-ju-ku-lian-jie.html</link><description>&#13;
 1、MySQL-python：只支持python2 是对C语言操作数据库的一个简单封装     &#13;
 2、mysqlclient：是1的分支效率最高，安装时容易因环境经常出现各种问题        &#13;
 3、pymysql：纯pthon实现效率不如2，但是无缝衔接python    &#13;
